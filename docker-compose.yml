@@ -19,12 +19,3 @@ services:
           memlock:
               soft: -1
               hard: -1
-      volumes:
-          - ./data:/usr/share/elasticsearch/data
-  dejavu:
-      image: appbaseio/dejavu:3.4.7
-      container_name: dejavu
-      ports:
-          - '1358:1358'
-      links:
-          - elasticsearch
